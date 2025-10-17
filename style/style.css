@@ -30,13 +30,14 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  color: white;
-  padding: 2rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  background-image: url('image/banner.jpg'); /* your banner image path */
+  background-size: cover;   /* makes sure the image covers the whole header */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat; /* prevents repeating */
+  padding: 60px 0; /* gives space for content */
+  color: white; /* text color on banner */
 }
+
 
 .header-content {
   position: relative;
