@@ -30,14 +30,13 @@ body {
 
 /* Header */
 header {
-  background-image: url('image/banner.jpg'); /* your banner image path */
-  background-size: cover;   /* makes sure the image covers the whole header */
-  background-position: center; /* centers the image */
-  background-repeat: no-repeat; /* prevents repeating */
-  padding: 60px 0; /* gives space for content */
-  color: white; /* text color on banner */
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-
 
 .header-content {
   position: relative;
@@ -220,6 +219,23 @@ h2::after {
 .item-description {
   margin-top: 0.5rem;
 }
+
+.f-name {
+  display: flex;
+  justify-content: space-between; /* keeps company left, date right */
+  align-items: center;
+  margin: 0; /* optional, to control spacing */
+}
+
+.company {
+  font-weight: 600; /* optional styling */
+}
+
+.duration {
+  color: #666; /* optional for subtle style */
+}
+
+
 
 /* Strengths */
 .strengths-container {
