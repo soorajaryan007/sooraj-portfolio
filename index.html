@@ -13,20 +13,7 @@
   </head>
 
   <body>
-    <script>
-      // Visitor Counter using countapi.xyz
-      const counterKey = "soorajaryan.portfolio.visits";
-
-      fetch(`https://api.countapi.xyz/hit/${counterKey}`)
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById("visit-count").innerText = data.value;
-        })
-        .catch(error => {
-          console.error("Error fetching visit count:", error);
-          document.getElementById("visit-count").innerText = "N/A";
-        });
-    </script>
+  
 
     <header>
       <div class="container header-content">
@@ -238,12 +225,7 @@
         </div>
       </div>
     </section>
-    <section id="visitor-counter" class="animate-on-scroll">
-      <div class="container">
-        <h2>Visitors</h2>
-        <p>This site has been visited <span id="visit-count">0</span> times.</p>
-      </div>
-</section>
+  
 
     <!-- Footer -->
     <footer id="contact">
