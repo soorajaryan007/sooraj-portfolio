@@ -1,254 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sooraj Aryan - Software Engineer</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style/style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  </head>
+    <title>Sooraj Aryan | Portfolio</title>
 
-  <body>
-  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
 
     <header>
-      <div class="container header-content">
-        <img src="image/sooraj_aryan.jpg" alt="Sooraj Aryan" class="profile-pic" />
-        <h1>Sooraj Aryan</h1>
-        <p class="tagline">Software Developer Engineer</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/sooraj-aryan-213b5a114/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/soorajaryan007" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="mailto:soorajaryan123@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
+        <nav>
+            <div class="logo">Sooraj Aryan</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="sooraj-aryan-resume.pdf" class="btn-nav" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="about" class="animate-on-scroll">
-      <div class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-          <div class="about-text">
+    <main>
+        <section id="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <img src="images/profile.jpg" alt="Sooraj Aryan Profile Picture" class="hero-profile-img">
+                    <h1 id="heroTitle">Hi, I'm Sooraj Aryan</h1>
+                    <p id="heroSubtitle" class="hero-subtitle">Software Developer Engineer</p>
+                    <p class="hero-description">
+                        A backend developer specializing in the Java and Spring ecosystem, passionate about building robust and scalable applications.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="sooraj-aryan-resume.pdf" class="btn" download>
+                            Download Resume <i class="fas fa-download"></i>
+                        </a>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/sooraj-aryan-213b5a114/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/soorajaryan007" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="mailto:soorajaryan123@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            <a id="speakBtn" title="Hear me introduce myself" style="cursor: pointer;"><i class="fas fa-volume-up"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-banner">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Abstract code on a screen">
+                </div>
+            </div> <a href="#about" class="scroll-down-btn" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
             <p>
-             “Seeking Opportunities in IT – Software Development, Data Engineering, 
-             Data Analysis, or ML/AI Engineering | Proficient in Python and Various
-              Python Libraries”
+                Seeking Opportunities in IT – Software Development, Data Engineering, Data Analysis, or ML/AI Engineering. I thrive on collaboration and am dedicated to making a positive impact in the field of technology.
             </p>
+        </section>
 
-            <p>
-              I thrive on collaboration and am dedicated to making a positive
-              impact in the field of technology.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="animate-on-scroll">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-container">
-          <div class="skill-category">
-            <h3>Programming Languages</h3>
-            <div class="skill-item">Python</div>
-            <div class="skill-item">Java</div>  
-            <div class="skill-item">C++</div>
-            <div class="skill-item">JavaScript</div>
-          </div>
-          <div class="skill-category">
-            <h3>Web Development</h3>
-            <div class="skill-item">HTML & CSS</div>
-            <div class="skill-item">Java</div>
-            <div class="skill-item">Spring Boot</div>
-            <div class="skill-item">Back End Developer</div>
-          </div>
-          <div class="skill-category">
-            <h3>Database & Analytics</h3>
-            <div class="skill-item">SQL</div>
-            <div class="skill-item">Power BI</div>
-            <div class="skill-item">Database Management</div>
-          </div>
-          <div class="skill-category">
-            <h3>Other Technologies</h3>
-            <div class="skill-item">Data Enginereering</div>
-            <div class="skill-item">Machine Learning</div>
-            <div class="skill-item">Data Analyst</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Strengths -->
-    <section id="strengths" class="animate-on-scroll">
-      <div class="container">
-        <h2>Strengths</h2>
-        <div class="strengths-container">
-          <div class="strength-item">
-            <div class="strength-icon"><i class="fas fa-briefcase"></i></div>
-            <h3 class="strength-title">Work Ethics</h3>
-            <p>
-              Committed to hard and smart work combined with effective communication
-            </p>
-          </div>
-          <div class="strength-item">
-            <div class="strength-icon"><i class="fas fa-graduation-cap"></i></div>
-            <h3 class="strength-title">Learning Enthusiasm</h3>
-            <p>Enjoy continuous learning and updating knowledge regularly</p>
-          </div>
-          <div class="strength-item">
-            <div class="strength-icon"><i class="fas fa-users"></i></div>
-            <h3 class="strength-title">Team Collaboration</h3>
-            <p>
-              Thrive in team environments and enjoy collaborative problem-solving
-            </p>
-          </div>
-          <div class="strength-item">
-            <div class="strength-icon"><i class="fas fa-lightbulb"></i></div>
-            <h3 class="strength-title">Innovation</h3>
-            <p>
-              Passionate about developing creative solutions to technical challenges
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-        <!-- Experience -->
-    <section id="experience" class="animate-on-scroll">
-      <div class="container">
-        <h2>Experience</h2>
-        <div class="experience-item">
-          <p class="f-name">
-            <span class="company"><a href ="https://www.linkedin.com/company/adani-group/posts/?feedView=all"target="_blank"> Adani Group</a>, Ahmedabad</span>
-            <span class="duration">(June 2024 - June 2025)</span>
-          </p>
-
-
-          <p class="item-description">
-            Experience in Data Analytics 
-          </p>
-        </div>
-
-        <div class="internship-item">
-          <p class="item-description">
-            Data Analyst at Adani Group with expertise in machine learning, Python, and data analytics.
-            Developed a Power BI dashboard on static data for logistics flow analysis to visualize and analyze key metrics,
-            including production, dispatch, and sales performance of cement. Collected relevant data for dashboard building from cement plants. 
-            Gathered large manufacturing datasets from multiple sources related to Vertical Roller Mill (Cement Mill) operations. 
-            Preprocessed and cleaned datasets using Excel VBA for automation and Python libraries for handling missing values, outliers, and inconsistencies.
-            Built a multiple linear regression model to analyze relationships between operational parameters and power consumption. 
-            Identified significant predictors of power consumption based on statistical metrics. Interpreted the model’s results to determine the parameters
-            that have the most significant impact on power consumption.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="animate-on-scroll">
-      <div class="container">
-        <h2>Education</h2>
-        <div class="education-item">
-          <div class="item-header">
-            <h3 class="item-title">BTech, Electrical Engineering</h3>
-            <span class="item-date">65% of marks</span>
-          </div>
-          <p class="item-subtitle">Government Engineering College Bikaner</p>
-          <p class="item-description">Bikaner , Rajasthan</p>
-        </div>
-        <div class="education-item">
-          <div class="item-header">
-            <h3 class="item-title">PGDM, Marketing & Analytics</h3>
-            <span class="item-date">7.8  cgpa</span>
-          </div>
-          <p class="item-subtitle">MS Ramaiah Institute of Management</p>
-          <p class="item-description">Bengaluru , Karnataka</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" class="animate-on-scroll">
-      <div class="container">
-        <h2>Certifications</h2>
-        <div class="certificate-grid">
-          <div class="certificate-card">
-            <img src="image/Mlcoursera.png" alt="Coursera Certification" class="certificate-img" />
-            <div class="certificate-content">
-              <h3 class="item-title">
-                <a href="https://www.coursera.org/account/accomplishments/specialization/QLCCUMFAUVBX" target="_blank" rel="noopener noreferrer">
-                  Machine Learning by Deeplearning
-                </a>
-              </h3>
-              <p class="item-subtitle">Coursera</p>
-              <p class="item-description">Completed courses in Programming in Python</p>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="card">
+                <h3>Java Development Trainee</h3>
+                <p class="company-info"><strong>HulkHire</strong> | Hyderabad (Remote)</p>
+                <p>
+                    Contributed to backend Java development, focusing on PayPal Integration, Spring Boot, and REST API creation.
+                </p>
             </div>
-          </div>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-container">
+                <div class="card">
+                    <h3>PGDM, Marketing & Analytics</h3>
+                    <p class="company-info">MS Ramaiah Institute of Management, Bengaluru, Karnataka</p>
+                </div>
+                <div class="card">
+                    <h3>BTech, Electrical Engineering</h3>
+                    <p class="company-info">Government Engineering College Bikaner, Bikaner, Rajasthan</p>
+                </div>
+            </div>
+        </section>
 
-          <!-- (other certificate cards remain the same) -->
-        </div>
-      </div>
-    </section>
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="card">
+                <h3>Machine Learning</h3>
+                <p class="company-info"><strong>Coursera</strong></p>
+                <p>Credential for foundational machine learning concepts and techniques.</p>
+            </div>
+        </section>
 
-    <!-- Internships -->
-    <section id="internships" class="animate-on-scroll">
-      <div class="container">
-        <h2>Internships</h2>
-        <div class="internship-item">
-          <div class="item-header">
-            <h3 class="item-title">Java Development Trainee</h3>
-          </div>
-          <p class="item-subtitle"><a href="https://www.linkedin.com/company/hulkhire/product/" target="_blank">HulkHire</a>, Hyderabad (Remote)</p>
-          <p class="item-description">
-            Internships in Backend Java Development (PayPal Integration, Spring Boot, REST API)
-          </p>
-        </div>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages & Frameworks</h4>
+                    <ul><li>Java</li><li>Spring Framework</li><li>Spring Boot</li><li>Spring Data JPA</li><li>Spring Security</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases & Data</h4>
+                    <ul><li>SQL (PostgreSQL, MySQL)</li><li>NoSQL (MongoDB)</li><li>Hibernate</li><li>Redis (Caching)</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h4>APIs & Messaging</h4>
+                    <ul><li>RESTful APIs</li><li>Microservices</li><li>GraphQL (Basic)</li><li>RabbitMQ / Kafka</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & DevOps</h4>
+                    <ul><li>Git & GitHub</li><li>Maven / Gradle</li><li>Docker</li><li>CI/CD (Jenkins, GitLab CI)</li><li>JUnit & Mockito</li></ul>
+                </div>
+            </div>
+        </section>
 
-      </div>
-    </section>
+        <section id="strengths">
+            <h2>Strengths</h2>
+            <div class="strengths-container">
+                <div class="strength-card">
+                    <i class="fas fa-handshake"></i><h4>Work Ethics</h4>
+                    <p>Committed to hard and smart work combined with effective communication.</p>
+                </div>
+                <div class="strength-card">
+                    <i class="fas fa-book-reader"></i><h4>Learning Enthusiasm</h4>
+                    <p>Enjoy continuous learning and updating knowledge regularly.</p>
+                </div>
+                <div class="strength-card">
+                    <i class="fas fa-users-line"></i><h4>Team Collaboration</h4>
+                    <p>Thrive in team environments and enjoy collaborative problem-solving.</p>
+                </div>
+                <div class="strength-card">
+                    <i class="fas fa-rocket"></i><h4>Innovation</h4>
+                    <p>Passionate about developing creative solutions to technical challenges.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Interests -->
-    <section id="interests" class="animate-on-scroll">
-      <div class="container">
-        <h2>Interests</h2>
-        <div>
-          <span class="interest-item"><i class="fas fa-presentation"></i> Presentation</span>
-          <span class="interest-item"><i class="fas fa-comments"></i> Communication</span>
-          <span class="interest-item"><i class="fas fa-cricket"></i> Cricket</span>
-          <span class="interest-item"><i class="fas fa-book-open"></i> Reading</span>
-          <span class="interest-item"><i class="fas fa-laptop-code"></i> Coding</span>
-          <span class="interest-item"><i class="fas fa-lightbulb"></i> Innovation</span>
-        </div>
-      </div>
-    </section>
-  
+        <section id="interests">
+            <h2>Interests</h2>
+            <div class="interests-container">
+                <div class="interest-tag">Presentation</div><div class="interest-tag">Communication</div><div class="interest-tag">Cricket</div><div class="interest-tag">Reading</div><div class="interest-tag">Coding</div><div class="interest-tag">Innovation</div>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <div class="contact-info">
-          <p><i class="fas fa-envelope"></i> <a href="mailto:soorajaryan123@gmail.com" class="contact-link">soorajaryan123@gmail.com</a></p>
-          <p><i class="fas fa-phone"></i> <a href="tel:7340089930" class="contact-link">7340089930</a></p>
-          <p><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnatka</p>
-        </div>
-        <div class="social-links" style="margin-top: 1.5rem">
-          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="mailto:soorajaryan123@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p style="margin-top: 1.5rem">
-          &copy; 2025 Sooraj Aryan. All rights reserved.
-        </p>
-      </div>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Have a question or want to work together? Leave your details below.</p>
+            <form id="contact-form" action="https://formspree.io/f/mjkazbed" method="POST">
+                <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" required></div>
+                <div class="form-group"><label for="email">Your Email</label><input type="email" id="email" name="email" required></div>
+                <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <p id="form-status"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sooraj Aryan. All rights reserved.</p>
     </footer>
 
-    <div class="back-to-top"><i class="fas fa-arrow-up"></i></div>
-
     <script src="script.js"></script>
-  </body>
+    <a href="#" id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+</body>
 </html>
