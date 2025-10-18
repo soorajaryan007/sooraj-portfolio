@@ -13,6 +13,21 @@
   </head>
 
   <body>
+    <script>
+      // Visitor Counter using countapi.xyz
+      const counterKey = "soorajaryan.portfolio.visits";
+
+      fetch(`https://api.countapi.xyz/hit/${counterKey}`)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("visit-count").innerText = data.value;
+        })
+        .catch(error => {
+          console.error("Error fetching visit count:", error);
+          document.getElementById("visit-count").innerText = "N/A";
+        });
+    </script>
+
     <header>
       <div class="container header-content">
         <img src="image/sooraj_aryan.jpg" alt="Sooraj Aryan" class="profile-pic" />
@@ -200,7 +215,7 @@
           <div class="item-header">
             <h3 class="item-title">Java Development Trainee</h3>
           </div>
-          <p class="item-subtitle"><a href="https://www.linkedin.com/company/hulkhire/product/",target="_blank">HulkHire</a>, Hyderabad (Remote)</p>
+          <p class="item-subtitle"><a href="https://www.linkedin.com/company/hulkhire/product/" target="_blank">HulkHire</a>, Hyderabad (Remote)</p>
           <p class="item-description">
             Internships in Backend Java Development (PayPal Integration, Spring Boot, REST API)
           </p>
@@ -223,6 +238,12 @@
         </div>
       </div>
     </section>
+    <section id="visitor-counter" class="animate-on-scroll">
+      <div class="container">
+        <h2>Visitors</h2>
+        <p>This site has been visited <span id="visit-count">0</span> times.</p>
+      </div>
+</section>
 
     <!-- Footer -->
     <footer id="contact">
