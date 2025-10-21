@@ -1,35 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Theme Toggler ---
-    const themeToggle = document.getElementById('theme-toggle');
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    // --- Theme Switcher ---
+    const themeSwitcherBtn = document.getElementById('theme-switcher-btn');
+    const themeOptions = document.getElementById('theme-options');
+    const themeOptionButtons = document.querySelectorAll('.theme-option');
 
-    // Function to set the theme
     function setTheme(theme) {
         document.body.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
     }
-
-    // Get theme from local storage or user's OS preference
+    
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         setTheme(savedTheme);
-    } else if (prefersDarkScheme.matches) {
-        setTheme('dark');
     } else {
-        setTheme('light');
+        setTheme('dark'); // Default to dark theme for new visitors
     }
 
-    // Add click event to the toggle button
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            setTheme(newTheme);
+    if (themeSwitcherBtn) {
+        themeSwitcherBtn.addEventListener('click', () => {
+            themeOptions.classList.toggle('hidden');
         });
     }
 
-    // The rest of your script.js code goes here...
+    themeOptionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const theme = button.getAttribute('data-theme');
+            setTheme(theme);
+            themeOptions.classList.add('hidden');
+        });
+    });
 
     // --- Smooth scrolling for navigation links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -80,14 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Stop observing after animation
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1 // Animate when 10% of the element is visible
+        threshold: 0.1
     });
 
-    const elementsToAnimate = document.querySelectorAll('.card, .skill-category, .strength-card');
+    const elementsToAnimate = document.querySelectorAll('.card, .skill-category, .strength-card, .project-card, .cert-card');
     elementsToAnimate.forEach((el) => scrollObserver.observe(el));
 
     // --- Scroll to Top Button ---
@@ -100,13 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollTopBtn.classList.remove("show");
             }
         };
-
         scrollTopBtn.addEventListener("click", function(e) {
             e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     }
 
@@ -114,18 +110,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const speakButton = document.getElementById('speakBtn');
     const heroTitle = document.getElementById('heroTitle');
     const heroSubtitle = document.getElementById('heroSubtitle');
-
     if (speakButton && heroTitle && heroSubtitle && 'speechSynthesis' in window) {
         speakButton.addEventListener('click', (e) => {
             e.preventDefault();
             const textToSpeak = `${heroTitle.textContent}, ${heroSubtitle.textContent}`;
-            
-            // Stop any previous speech before starting a new one
             window.speechSynthesis.cancel();
-            
             const utterance = new SpeechSynthesisUtterance(textToSpeak);
             window.speechSynthesis.speak(utterance);
         });
     }
-
 });

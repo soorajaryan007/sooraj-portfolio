@@ -14,23 +14,27 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
-
-    <header>
+<body data-theme="dark"> <header>
         <nav>
             <div class="logo">Sooraj Aryan</div>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#experience">Experiences</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
-                    <button id="theme-toggle" title="Toggle theme">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
-                    </button>
+                
+                <li id="theme-switcher-container">
+                    <button id="theme-switcher-btn" title="Change theme"><i class="fas fa-palette"></i></button>
+                    <div id="theme-options" class="hidden">
+                        <button class="theme-option" data-theme="light" title="Light Theme"></button>
+                        <button class="theme-option" data-theme="dark" title="Dark Theme"></button>
+                        <button class="theme-option" data-theme="forest" title="Forest Theme"></button>
+                        <button class="theme-option" data-theme="sunset" title="Sunset Theme"></button>
+                    </div>
                 </li>
-                <li><a href="images/SOORAJ-ARYAN-ResumeJV.pdf" class="btn-nav" target="_blank">Resume</a></li>
+                
+                <li><a href="sooraj-aryan-resume.pdf" class="btn-nav" target="_blank">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -46,7 +50,7 @@
                         A backend developer specializing in the Java and Spring ecosystem, passionate about building robust and scalable applications.
                     </p>
                     <div class="hero-buttons">
-                        <a href="images/SOORAJ-ARYAN-ResumeJV.pdf" class="btn" download>
+                        <a href="sooraj-aryan-resume.pdf" class="btn" download>
                             Download Resume <i class="fas fa-download"></i>
                         </a>
                         <div class="social-links">
@@ -67,42 +71,109 @@
         <section id="about">
             <h2>About Me</h2>
             <p>
-               I’m Sooraj Aryan, a dedicated Software Development Engineer specializing in Java and Spring-based backend development, passionate about building scalable and efficient applications. With a background in Marketing & Analytics and Electrical Engineering, I combine analytical thinking with technical expertise to solve complex problems. My experience at HulkHire strengthened my skills in Spring Boot, RESTful APIs, PayPal integration, and microservices, while my curiosity drives me to continuously learn emerging technologies in AI, data engineering, and cloud computing. I value collaboration, innovation, and continuous improvement, aiming to create impactful software that enhances both performance and user experience.
-
+                I’m Sooraj Aryan, a dedicated Software Development Engineer specializing in Java and Spring-based backend development, passionate about building scalable and efficient applications. With a background in Marketing & Analytics and Electrical Engineering, I combine analytical thinking with technical expertise to solve complex problems. My experience strengthened my skills in Spring Boot, RESTful APIs, and microservices, while my curiosity drives me to continuously learn emerging technologies in AI, data engineering, and cloud computing. I value collaboration, innovation, and continuous improvement, aiming to create impactful software that enhances both performance and user experience.
             </p>
         </section>
 
         <section id="experience">
-            <h2>Experience</h2>
+            <h2>Experiences</h2>
+            <div class="card">
+                <h3>Data Analyst</h3>
+                <p class="company-info"><strong>Adani Group</strong> | Ahmedabad, Gujarat | June 2024 - June 2025</p>
+                <ul>
+                    <li>Acquired and processed large-scale manufacturing datasets, increasing data coverage by 25%.</li>
+                    <li>Automated data cleaning using Excel VBA and Python, reducing manual effort by 30%.</li>
+                    <li>Built a multiple linear regression model that identified key predictors for power consumption, enabling a 10-15% reduction in energy usage.</li>
+                    <li>Created Power BI dashboards for logistics analysis, enhancing reporting efficiency by 40%.</li>
+                </ul>
+            </div>
             <div class="card">
                 <h3>Java Development Trainee</h3>
-                <p class="company-info"><strong>HulkHire</strong> | Hyderabad (Remote)</p>
+                <p class="company-info"><strong>HulkHire</strong> | Hyderabad (Remote) | October 2024 - Present </p>
                 <p>
-                    Contributed to backend Java development, focusing on PayPal Integration, Spring Boot, and REST API creation.
+                    Contributed to backend Java development, focusing on PayPal Integration, building RESTful APIs, and utilizing the Spring Boot framework to create microservices.
                 </p>
             </div>
         </section>
-        
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250.png/5A9BD5/ffffff?text=Weather+App" alt="Weather Web App Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Real-Time Weather Application</h3>
+                        <p>A web app that provides current weather conditions and a 5-day forecast for any city, built with a Spring Boot backend to handle calls to a third-party weather API.</p>
+                        <div class="project-tags">
+                            <span>Spring Boot</span>
+                            <span>Java</span>
+                            <span>REST API</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" title="View Source Code"><i class="fab fa-github"></i> Code</a>
+                           <!-- <a href="#" target="_blank" title="View Live Demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>-->
+                        </div>
+                    </div>
+                </div>
+<div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250.png/44B78B/ffffff?text=Django+Project" alt="Django Capstone Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Django E-commerce Platform</h3>
+                        <p>Developed a full-stack e-commerce web application featuring user authentication, product catalog management, a shopping cart, and order processing. Built with a robust RESTful API to support a decoupled front-end.</p>
+                        <div class="project-tags">
+                            <span>Django</span>
+                            <span>Python</span>
+                            <span>REST Framework</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" title="View Source Code"><i class="fab fa-github"></i> Code</a>
+                            <!--<a href="#" target="_blank" title="View Live Demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <section id="education">
             <h2>Education</h2>
             <div class="education-container">
                 <div class="card">
                     <h3>PGDM, Marketing & Analytics</h3>
-                    <p class="company-info">MS Ramaiah Institute of Management, Bengaluru, Karnataka</p>
+                    <p class="company-info">MSRIM, Bengaluru, Karnataka | Aug 2022 - Apr 2024</p>
                 </div>
                 <div class="card">
                     <h3>BTech, Electrical Engineering</h3>
-                    <p class="company-info">Government Engineering College Bikaner, Bikaner, Rajasthan</p>
+                    <p class="company-info">Engineering College Bikaner, Bikaner, Rajasthan | Aug 2016 - Apr 2020</p>
                 </div>
             </div>
         </section>
 
         <section id="certifications">
             <h2>Certifications</h2>
-            <div class="card">
-                <h3>Machine Learning</h3>
-                <p class="company-info"><strong>Coursera</strong></p>
-                <p>Credential for foundational machine learning concepts and techniques.</p>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <h4>Machine Learning by DeepLearning.ai</h4>
+                    <p class="company-info"><strong>Coursera</strong></p>
+                </div>
+                <div class="cert-card">
+                    <h4>IBM Full Stack Software Development Certificates</h4>
+                    <p class="company-info"><strong>Coursera</strong></p>
+                </div>
+                <div class="cert-card">
+                    <h4>IBM Data Engineering Professional Certificates</h4>
+                    <p class="company-info"><strong>Coursera</strong></p>
+                </div>
+                <div class="cert-card">
+                    <h4>AWS </h4>
+                    <p class="company-info"><strong>Coursera</strong></p>
+                </div>
             </div>
         </section>
 
@@ -133,7 +204,7 @@
             <div class="strengths-container">
                 <div class="strength-card">
                     <i class="fas fa-handshake"></i><h4>Work Ethics</h4>
-                    <p>CI am committed to delivering high-quality results through hard work, consistency, and a responsible approach to every task.</p>
+                    <p>I am committed to delivering high-quality results through hard work, consistency, and a responsible approach to every task.</p>
                 </div>
                 <div class="strength-card">
                     <i class="fas fa-book-reader"></i><h4>Learning Enthusiasm</h4>
@@ -141,7 +212,7 @@
                 </div>
                 <div class="strength-card">
                     <i class="fas fa-users-line"></i><h4>Team Collaboration</h4>
-                    <p>I enjoy working in team environments, contributing ideas, and collaborating to achieve common goals efficiently</p>
+                    <p>I enjoy working in team environments, contributing ideas, and collaborating to achieve common goals efficiently.</p>
                 </div>
                 <div class="strength-card">
                     <i class="fas fa-rocket"></i><h4>Innovation</h4>
@@ -156,10 +227,22 @@
                 <div class="interest-tag">Presentation</div><div class="interest-tag">Communication</div><div class="interest-tag">Cricket</div><div class="interest-tag">Reading</div><div class="interest-tag">Coding</div><div class="interest-tag">Innovation</div>
             </div>
         </section>
-
+        
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>Have a question or want to work together? Leave your details below.</p>
+            <p>Have a question or want to work together? Feel free to reach out directly or use the form below.</p>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:soorajaryan123@gmail.com">soorajaryan123@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91-9304949253</span>
+                </div>
+            </div>
+
             <form id="contact-form" action="https://formspree.io/f/mjkazbed" method="POST">
                 <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" name="name" required></div>
                 <div class="form-group"><label for="email">Your Email</label><input type="email" id="email" name="email" required></div>
