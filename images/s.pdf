@@ -1,0 +1,36 @@
+Sooraj Aryan
+Software Developer Engineer
+
+Bengaluru, India • 09304949253 • soorajaryan123@gmail.com • LinkedIn• Portfolio
+
+SKILLS
+Languages & Frameworks: Python, Java, Spring Framework, Spring Boot, React, JavaScript
+Database & Data  :SQL (PostgreSQL, MySQL), NoSQL (MongoDB)
+APIs & Messaging :RESTful APIs, Microservices
+Tools & DevOps : Git & GitHub, Maven, Docker, GitLab CI, JUnit
+Machine Learning & Modeling: Regression, Classification, Random Forest 
+WORK EXPERIENCE 
+Java Developer Trainee  - HulkHire                                                                      October 2025 - Present | Hyderabad (Remote)
+Contributed to backend development projects using Java, Spring Boot, and RESTful APIs.Implemented PayPal payment gateway integration and optimized API performance.
+Assisted in developing and testing microservices for modular architecture.
+Participated in code reviews, unit testing, and API documentation.
+Data Analyst - Adani Group                                                                                        June 2024 – June 2025 | Ahmedabad,India
+Collected and preprocessed manufacturing data (Vertical Roller Mill) using Python and Excel. 
+Developed basic machine learning models to analyze energy usage and created Power BI dashboards to visualize operational metrics.
+Identified data patterns for operational improvements and collaborated with the team to ensure data quality and consistency.
+RECENT PROJECTS 
+AI-Powered Chat Application | Github |  Weblink                                                                                   October 2024 – Present                                                                                                      A full-stack, monolithic web application that uses a third-party AI to provide real-time chat responses and saves all conversation history.
+Technologies: Java 21, Spring Boot, Spring Web, Spring Data MongoDB, Thymeleaf, WebClient, Maven, Railway (Cloud Deployment), Mistral AI.
+Developed a complete, server-rendered application using Spring Boot and Thymeleaf, demonstrating a strong understanding of the monolithic architecture.
+Built a robust RESTful API to handle user chat requests and serve the complete chat history on page load.
+Integrated a third-party generative AI by making authenticated (Bearer Token) API calls to the Mistral AI service using Spring's non-blocking, reactive WebClient.
+Managed data persistence by modeling and storing all chat entries (questions, answers, and timestamps) in a MongoDB NoSQL database using Spring Data.
+Configured the application for a production environment by externalizing secrets (like MISTRAL_API_KEY) and database URIs (MONGO_URL) using environment variables.
+Deployed the entire two-service application (Spring Boot app + MongoDB) to the Railway cloud platform, debugging and resolving startup failures related to database and variable configuration.
+EDUCATION 
+Marketing & Analytics  | MSRIM Bengaluru | 2022 – 2024
+Electrical Engineering | Gov. Engineering College Bikaner | 2016 – 2020 
+CERTIFICATIONS 
+Machine Learning by DeepLearning | Certificate     
+IBM Generative AI Engineering Specialization | Certificate
+IBM Full Stack Software Developer  | Certificate
