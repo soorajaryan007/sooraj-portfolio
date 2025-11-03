@@ -1,5 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Mobile Menu Toggle ---
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            // Toggle ARIA expanded attribute
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+
     // --- Theme Switcher ---
     const themeSwitcherBtn = document.getElementById('theme-switcher-btn');
     const themeOptions = document.getElementById('theme-options');
@@ -18,13 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (themeSwitcherBtn) {
-        themeSwitcherBtn.addEventListener('click', () => {
+        themeSwitcherBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent click from closing mobile menu
             themeOptions.classList.toggle('hidden');
         });
     }
 
     themeOptionButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent click from closing mobile menu
             const theme = button.getAttribute('data-theme');
             setTheme(theme);
             themeOptions.classList.add('hidden');
@@ -35,9 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            // Don't smooth scroll if it's just the mobile link
+            if (!this.classList.contains('nav-link')) {
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
